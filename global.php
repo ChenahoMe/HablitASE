@@ -44,18 +44,18 @@ if(isset($_SESSION['HABLIT_ASE_USERNAME']) && isset($_SESSION['HABLIT_ASE_PASSWO
 	
 	if($user->CheckUser($userN, $userP, $mysqli))
 	{
-	define('LOGGED_IN', true);
-	define('USER_NAME', $userN);
-	define('USER_HASH', $userP);	
-	} else {
-	@session_destroy;
-	header("Location: index.php");
-	exit;
+		define('LOGGED_IN', true);
+		define('USER_NAME', $userN);
+		define('USER_HASH', $userP);	
+	} 
+	else 
+	{
+		define('LOGGED_IN', false);
 	}
-	} else {
-	define('LOGGED_IN', false);
-	define('USER_NAME', 'Guest');
-	define('USER_HASH', null);
-}
+} 
+	else 
+	{
+		define('LOGGED_IN', false);
+	}
 
 ?>

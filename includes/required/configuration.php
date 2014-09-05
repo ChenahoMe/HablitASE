@@ -24,7 +24,7 @@ define('LIMIT_ATTEMPTS', 0); // 0 to disable login attempts
 define('USERTOIP', false); // Current IP must match registered IP in order to login
 
 // For development use only
-define('DEVELOPMENT', false); // Do not set to true unless you know what you're doing
+define('DEVELOPMENT', true); // Do not set to true unless you know what you're doing
 // For development use only
 
 ?>
