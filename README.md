@@ -1,31 +1,10 @@
 HablitASE
 =========
 
-A secure and reliable staff management panel for RevCMS, coded by Chenaho (.me)
+HablitASE is a secure, in-development staff management panel coded for RevCMS, but is also compatible with other CMS's with some tweaking. We choose RevCMS simply because other management systems, such as UberCMS is just getting too old.
 
-HablitASE is an advanced ASE (housekeeping/staff management panel) allowing site staff to easily manage RevCMS & the in-game client. HablitASE is free-to-use, opensource management panel for all RevCMS based- hotels.
+HablitASE will offer hotel owners to easily manage their site and client in the one management panel, providing features such as "External user signon" - which allows staff to log into users' accounts by forcing a SSO ticket. And security features which prevent bruit forcing accounts.
 
-List of features HablitASE plans to integrate:
+HablitASE has 3 builds, DEVELOPMENT, BETA and RELEASED - development builds should never, for security reasons, be used on a production website. Whereas beta builds can, but may present errors, usually no security holes though. While released builds are approved after beta for production use.
 
-• Secure logins - to protect staff's accounts
-
-• Dashboard - which sets a welcome message and the functionality of the ASE
-
-• Social management - allows the staff member to edit, create and delete articles & site campaigns
-
-• User management - allows the staff member to edit a user (credits, pixels, rank, email, password)
-
-• Bans management - allows the staff member to create or withdraw a ban against a user
-
-• External signon - allows the staff member to log onto any users client
-
-
-As the development continues, we may add new features to the list. 
-
-Current build: DEVELOPMENT R100
-
-Development build - Currently untested for any security leaks, is not suggested to use a DEVELOPMENT build for production.
-
-Beta build - Can be safely used for production purposes, errors should be reported to us for inspection & fixing.
-
-Release build - Has been tested and is appropriate for production use.
+HablitASE build: DEVELOPMENT R100
