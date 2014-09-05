@@ -16,5 +16,6 @@ if(!LOGGED_IN)
 	header("Location: index.php");
 	exit;
 }
+
 ?>
 secret content, <a href="logout.php">logout</a>

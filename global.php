@@ -17,7 +17,7 @@ define('NOGO', false);
 // Require
 require( I . R . "configuration.php");
 //require( I . R . "mysqli.php"); // MySQLi is currently embedded in the Global file
-//require( I . R . "functions.php");
+require( I . R . "functions.php");
 require( I . R . "core.php");
 
 // MySQLi
@@ -28,10 +28,10 @@ $ip = $_SERVER['REMOTE_ADDR'];
 
 // Set variables for classes
 $user = new HabUsers();
-//$moderator = new ModeratorFunctions();
-//$admin = new AdministratorFunctions();
-//$manager = new ManagerFunctions();
-//$owner = new OwnerFunctions();
+$moderator = new ModeratorFunctions();
+$admin = new AdministratorFunctions();
+$manager = new ManagerFunctions();
+$owner = new OwnerFunctions();
 
 // Start zee' session
 session_start();

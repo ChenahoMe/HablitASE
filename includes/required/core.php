@@ -14,10 +14,14 @@ class HabUsers
 	{
 		$result = $mysqli->query("SELECT null FROM users WHERE username = '" . $username . "' AND password = '" . $password. "' LIMIT 1");
 		$row_cnt = $result->num_rows;
-		
-		// Returns the row count can either be 1, or 0
 		return $row_cnt;
-		//$result->close();
+	}
+	
+	function GetVar($var, $username, $mysqli)
+	{
+		$query = $mysqli->query("SELECT " . $var . " FROM users WHERE username = '" . $username . "' LIMIT 1");
+		$result = $query->fetch_assoc(); // We need to fetch the result first
+		return $result[$var];
 	}
 	
 }

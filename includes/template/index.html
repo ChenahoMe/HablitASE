@@ -48,15 +48,17 @@
 	
 	<div id="container">
 	<h1>Hablit ASE | Login</h1>
+		<?php 
+		//define('ERROR', '1');
+		//if(null !== ERROR) { echo "<div class='alert alert-danger'> Invalid login details. Attempt has been logged. IP: $ip</div>"; } ?>
 			<form method="post" style="margin-top:10px;">
 			<td><input type="text" name="username" id="username" placeholder="Username" autofocus /></td>
 			<td><input type="password" name="password" id="password" placeholder="Password" /></td>
 			<td><input type="submit" name="login" id="login" value="Login" style="margin-top:5px;" /></td>
 		</form>
 		<br /><hr>
-		<b>All logins made using this form are logged, including incorrect logins.
-		If a bruit force is detected your IP will be blocked by HablitASE.</b>
+		This panel has integrated security features protecting staffs' accounts. All failed attempts are logged. If a bruit force is detected, your IP will be blacklisted.
 	</div>
-	
+	<center>Powered by <a href="https://github.com/ChenahoMe/HablitASE/" target="_blank">HablitASE</a></center>
 	</body>
 </html>
