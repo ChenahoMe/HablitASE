@@ -38,4 +38,9 @@ class QueryManager
 
 }
 
+function filter($var)
+	{
+		return mysql_real_escape_string(stripslashes(htmlspecialchars($var)));
+	}
+
 ?>

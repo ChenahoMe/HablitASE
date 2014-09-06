@@ -22,7 +22,7 @@ if(isset($_POST['login']))
 {
 	if(isset($_POST['username']) && isset($_POST['password']))
 	{
-		$username = $_POST['username'];
+		$username = filter($_POST['username']);
 		$password = md5($_POST['password']);
 		
 		if($user->CheckUser($username, $password, $mysqli));

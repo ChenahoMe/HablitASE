@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8"/>
 	<title><?php echo HOTEL_NAME; ?>: Staff Management Panel</title>
-	<link rel="shortcut icon" href="eye.ico">
+	<link rel="shortcut icon" href="includes/required/cssjsimg/images/icon.ico">
 	<link rel="stylesheet" href="includes/required/cssjsimg/css/layout.css" type="text/css" media="screen" />
 	<!--[if lt IE 9]>
 	<link rel="stylesheet" href="css/ie.css" type="text/css" media="screen" />
@@ -121,7 +121,7 @@
 
 	function popSsoClient(sso)
 	{
-		window.open('http://haboa.co/external-client.php?forceTicket=' + sso, 'Haboa Hotel: External user sign on', 'width=980,height=600,location=no,status=no,menubar=no,directories=no,toolbar=no,resizable=no,scrollbars=no'); return false;
+		window.open('extsignon.php?forceTicket=' + sso, 'External user sign on', 'width=980,height=600,location=no,status=no,menubar=no,directories=no,toolbar=no,resizable=no,scrollbars=no'); return false;
 	}
 	</script>
 </head>
@@ -139,7 +139,7 @@
 			<p>Logged in as: <?php if (LOGGED_IN) { echo USER_NAME; } ?></p>
 		</div>
 		<div class="breadcrumbs_container">
-			<article class="breadcrumbs"><a href="">Housekeeping</a></article>
+			<article class="breadcrumbs"><a href="logout.php">Logout</a></article>
 		</div>
 	</section><!-- end of secondary bar -->
 
@@ -148,12 +148,12 @@
 		<ul class="toggle">
 			<li class="icn_tags"><a href="index.php?_cmd=main">Dashboard</a></li>
 		</ul>
-		<?php if (LOGGED_IN) { ?>
+		<?php if($user->GetVar('rank', USER_NAME, $mysqli) >= MODERATOR) { ?>
 		<h3>Moderation</h3>
 		<ul class="toggle">
 			
-			<li class="icn_profile"><a href="index.php?_cmd=iptool">User IP Lookup</a></li>
-			<li class="icn_profile"><a href="index.php?_cmd=bans">Bans & appeals</a></li>
+			<li class="icn_profile"><a href="iptool.php">User IP Lookup</a></li>
+			<li class="icn_profile"><a href="bans.php">Bans & appeals</a></li>
 			
 		</ul>
 		<?php } ?>
