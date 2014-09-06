@@ -26,4 +26,16 @@ class HabUsers
 	
 }
 
+class QueryManager
+{
+	
+	function Select($var, $from, $where, $row, $mysqli)
+	{
+		$query = $mysqli->query("SELECT " . $var . " FROM " . $from . " WHERE " . $where . " = '" . $row . "' LIMIT 1");
+		$result = $query->fetch_assoc(); // We need to fetch the result first
+		return $result[$var];
+	}
+
+}
+
 ?>

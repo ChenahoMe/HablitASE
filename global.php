@@ -28,6 +28,7 @@ $ip = $_SERVER['REMOTE_ADDR'];
 
 // Set variables for classes
 $user = new HabUsers();
+$query = new QueryManager();
 $moderator = new ModeratorFunctions();
 $admin = new AdministratorFunctions();
 $manager = new ManagerFunctions();
@@ -50,6 +51,7 @@ if(isset($_SESSION['HABLIT_ASE_USERNAME']) && isset($_SESSION['HABLIT_ASE_PASSWO
 	} 
 	else 
 	{
+		@session_destroy();
 		define('LOGGED_IN', false);
 	}
 } 

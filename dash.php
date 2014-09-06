@@ -18,4 +18,4 @@ if(!LOGGED_IN)
 }
 
 ?>
-secret content, <a href="logout.php">logout</a>
+<br /><br />secret content, <a href="logout.php">logout</a>
