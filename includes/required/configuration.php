@@ -13,11 +13,14 @@ define('USERNAME', 'root');
 define('PASSWORD', 'abc123');
 define('DATABASE', 'camwijs');
 
+// Site/hotel information
+define('HOTEL_NAME', 'Hablit');
+
 // Rank setup
-define('MODERATOR', 4);
-define('ADMINISTRATOR', 6);
-define('MANAGER', 8);
-define('OWNER', 10);
+define('MODERATOR', '4');
+define('ADMINISTRATOR', '6');
+define('MANAGER', '8');
+define('OWNER', '10');
 
 // Login security features
 define('LIMIT_ATTEMPTS', 0); // 0 to disable login attempts

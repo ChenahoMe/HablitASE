@@ -36,5 +36,5 @@ if(isset($_POST['login']))
 }
 
 // Include login HTML
-require( I . T . "index.html");
+require( I . T . "index.tpl");
 ?>
