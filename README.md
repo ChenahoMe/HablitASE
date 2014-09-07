@@ -7,4 +7,4 @@ HablitASE will offer hotel owners to easily manage their site and client in the 
 
 HablitASE has 3 builds, DEVELOPMENT, BETA and RELEASED - development builds should never, for security reasons, be used on a production website. Whereas beta builds can, but may present errors, usually no security holes though. While released builds are approved after beta for production use.
 
-HablitASE build: DEVELOPMENT R100
+HablitASE build: DEVELOPMENT R110

@@ -129,7 +129,7 @@
 
 	<header id="header">
 		<hgroup>
-			<h1 class="site_title"><a href="dash.php">HablitASE <?php if(DEVELOPMENT) { echo '- Development mode'; } else { echo '- BETA R100'; } ?></a></h1>
+			<h1 class="site_title"><a href="dash.php">HablitASE <?php if(DEVELOPMENT) { echo '- Development mode'; } else { echo '- BETA R110'; } ?></a></h1>
 			<h2 class="section_title"><a href="https://chenaho.me" target="_blank">Chenaho</a></h2><div class="btn_view_site"><a href="../me">Main Site</a></div>
 		</hgroup>
 	</header> <!-- end of header bar -->
