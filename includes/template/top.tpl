@@ -146,14 +146,46 @@
 <aside id="sidebar" class="column">
 		<h3>General</h3>
 		<ul class="toggle">
-			<li class="icn_tags"><a href="index.php?_cmd=main">Dashboard</a></li>
+			<li class="icn_tags"><a href="dash.php">Dashboard</a></li>
+			<li class="icn_tags"><a href="notes.php">Noteboard</a></li>
+			<li class="icn_tags"><a href="downreport.php">Downtime report</a></li>
+			
 		</ul>
-		<?php if($user->GetVar('rank', USER_NAME, $mysqli) >= MODERATOR) { ?>
+		<?php if(RANK >= MODERATOR) { ?>
 		<h3>Moderation</h3>
 		<ul class="toggle">
 			
 			<li class="icn_profile"><a href="iptool.php">User IP Lookup</a></li>
 			<li class="icn_profile"><a href="bans.php">Bans & appeals</a></li>
+			
+		</ul>
+		<?php } ?>
+		<?php if(RANK >= ADMINISTRATOR) { ?>
+		<h3>Administration</h3>
+		<ul class="toggle">
+			
+			<li class="icn_settings"><a href="warticle.php">Write article</a></li>
+			<li class="icn_settings"><a href="marticle.php">Manage articles</a></li>
+			<li class="icn_settings"><a href="campaigns.php">Edit campaigns</a></li>
+			
+		</ul>
+		<?php } ?>
+		<?php if(RANK >= MANAGER) { ?>
+		<h3>Management</h3>
+		<ul class="toggle">
+			
+			<li class="icn_add_user"><a href="maint.php">Hotel maintenance</a></li>
+			<li class="icn_add_user"><a href="vip.php">Issue VIP</a></li>
+			<li class="icn_add_user"><a href="euser.php">Edit a user</a></li>
+			
+		</ul>
+		<?php } ?>
+		<?php if(RANK >= OWNER) { ?>
+		<h3>Owner functions</h3>
+		<ul class="toggle">
+			
+			<li class="icn_add_user"><a href="ecata.php">Edit catalogue</a></li>
+			<li class="icn_add_user"><a href="aeuser.php"><b>ADVANCE</b> - Edit a user</a></li>
 			
 		</ul>
 		<?php } ?>
