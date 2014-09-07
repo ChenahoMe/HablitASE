@@ -25,7 +25,7 @@ if(isset($_POST['login']))
 		$username = filter($_POST['username']);
 		$password = md5($_POST['password']);
 		
-		if($user->CheckUser($username, $password, $mysqli));
+		if($user->CheckUser($username, $password, $mysqli, MODERATOR));
 		{
 			$_SESSION['HABLIT_ASE_USERNAME'] = $username;
 			$_SESSION['HABLIT_ASE_PASSWORD'] = $password;

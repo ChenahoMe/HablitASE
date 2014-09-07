@@ -38,10 +38,10 @@ session_start();
 // Check to see if a session is set
 if(isset($_SESSION['HABLIT_ASE_USERNAME']) && isset($_SESSION['HABLIT_ASE_PASSWORD']))
 {
-	$userN = $_SESSION['HABLIT_ASE_USERNAME'];
-	$userP = $_SESSION['HABLIT_ASE_PASSWORD'];
+	$userN = filter($_SESSION['HABLIT_ASE_USERNAME']);
+	$userP = filter($_SESSION['HABLIT_ASE_PASSWORD']);
 	
-	if($user->CheckUser($userN, $userP, $mysqli))
+	if($user->CheckUser($userN, $userP, $mysqli, MODERATOR))
 	{
 		define('LOGGED_IN', true);
 		define('USER_NAME', $userN);

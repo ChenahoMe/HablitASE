@@ -15,6 +15,8 @@ define('DATABASE', 'camwijs');
 
 // Site/hotel information
 define('HOTEL_NAME', 'Hablit');
+define('SITE_URL', 'http://127.0.0.1');
+define('PANEL_URL', 'http://127.0.0.1/HablitASE');
 
 // Rank setup
 define('MODERATOR', '4');
