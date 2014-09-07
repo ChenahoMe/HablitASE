@@ -11,8 +11,6 @@
 define('I', 'includes/');
 define('R', 'required/');
 define('T', 'template/');
-define('NOTSET', false);
-define('NOGO', false);
 
 // Require
 require( I . R . "configuration.php");
@@ -47,17 +45,20 @@ if(isset($_SESSION['HABLIT_ASE_USERNAME']) && isset($_SESSION['HABLIT_ASE_PASSWO
 	{
 		define('LOGGED_IN', true);
 		define('USER_NAME', $userN);
-		define('USER_HASH', $userP);	
+		define('USER_HASH', $userP);
+		define('RANK', $user->GetVar('rank', USER_NAME, $mysqli));
 	} 
 	else 
 	{
 		@session_destroy();
 		define('LOGGED_IN', false);
+		define('RANK', '0');
 	}
 } 
 	else 
 	{
 		define('LOGGED_IN', false);
+		define('RANK', '0');
 	}
 
 ?>

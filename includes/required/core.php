@@ -12,7 +12,7 @@ class HabUsers
 
 	function CheckUser($username, $password, $mysqli)
 	{
-		$result = $mysqli->query("SELECT null FROM users WHERE username = '" . $username . "' AND password = '" . $password. "' LIMIT 1");
+		$result = $mysqli->query("SELECT null FROM users WHERE username = '" . $username . "' AND password = '" . $password. "' AND rank >= '4' LIMIT 1");
 		$row_cnt = $result->num_rows;
 		return $row_cnt;
 	}

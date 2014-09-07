@@ -18,7 +18,7 @@ if(!LOGGED_IN)
 }
 
 // Checks to see if the user is minimum rank (moderator)
-if($user->GetVar('rank', USER_NAME, $mysqli) <= MODERATOR)
+if(RANK <= MODERATOR - 1)
 {
 	header("Location: logout.php");
 	exit;
