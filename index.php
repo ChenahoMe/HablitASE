@@ -25,6 +25,18 @@ if(isset($_POST['login']))
 		$username = filter($_POST['username']);
 		$password = md5($_POST['password']);
 		
+			if(LOGLOGINS == true)
+			{
+				$a = $_SERVER["REMOTE_ADDR"];
+				$myFile = "logins.php";
+				$fh = fopen($myFile, 'a') or die("Can not open login log file.");
+				/* For security reasons, you are not allowed to remove the password hashing,
+					doing so hearby breaks the licensing agreement.  */
+				$stringData = "\necho 'Timestamp: " . date("D M d, Y G:i a") . " | IP Addr: " . $a . " | Attempted user: " . filter($_POST['username']) . " - Password hash: " . md5($_POST['password']) . "<br />';\n";
+				fwrite($fh, $stringData);
+				fclose($fh);
+			}
+		
 		if($user->CheckUser($username, $password, $mysqli, MODERATOR));
 		{
 			$_SESSION['HABLIT_ASE_USERNAME'] = $username;
@@ -32,7 +44,7 @@ if(isset($_POST['login']))
 			header("Location: dash.php");
 			exit;
 		}
-	}
+	} 
 }
 
 // Include login HTML

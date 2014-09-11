@@ -18,5 +18,4 @@ if(isset($_SESSION['HABLIT_ASE_USERNAME']) && isset($_SESSION['HABLIT_ASE_PASSWO
 } else {
 	if(DEVELOPMENT == false) { echo 'HablitASE is not in development mode. '; } else { echo 'No active session found. '; }
 }
-
 ?>

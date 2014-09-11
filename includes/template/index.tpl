@@ -45,6 +45,11 @@
 	}
 	</style>
     <body>
+	<center>
+	<?php
+	if(isset($_GET['logout'])) { echo '<div id="container">You\'ve been successfully logged out!</div>'; } else if(isset($_GET['nologin'])) { echo '<div id="container">There was no active session to end.</div>'; }
+	?>
+	</center>
 	
 	<div id="container">
 	<h1>Hablit ASE | Login</h1>

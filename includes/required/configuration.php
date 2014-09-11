@@ -25,11 +25,11 @@ define('MANAGER', '8');
 define('OWNER', '10');
 
 // Login security features
-define('LIMIT_ATTEMPTS', 0); // 0 to disable login attempts
-define('USERTOIP', false); // Current IP must match registered IP in order to login
+define('LIMIT_ATTEMPTS', 0); // Feature is not active. Keep set to 0.
+define('LOGLOGINS', false); // Currently in development, may be somewhat unsafe to use? Set to true to enable login logs.
 
-// For development use only
-define('DEVELOPMENT', true); // Do not set to true unless you know what you're doing
-// For development use only
+// Keep DEVELOPMENT mode as false, unless
+define('DEVELOPMENT', true);
+// you are aware of the development features.
 
 ?>

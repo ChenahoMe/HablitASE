@@ -23,6 +23,7 @@ $mysqli = new mysqli(HOSTNAME, USERNAME, PASSWORD, DATABASE);
 
 // Sets the sessions IP
 $ip = $_SERVER['REMOTE_ADDR'];
+define('IP', $_SERVER['REMOTE_ADDR']);
 
 // Set variables for classes
 $user = new HabUsers();
